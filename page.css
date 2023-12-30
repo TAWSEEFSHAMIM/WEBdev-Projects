@@ -1,0 +1,33 @@
+/* body{
+    background-color: black;
+    font-family: sans-serif,Arial, Helvetica;
+} */
+#username{
+    text-align:right;
+    font-family: sans-serif;
+    padding-bottom: 20px;
+    color: black;
+    font-weight: light;
+    display: inline;
+}
+nav .round{ 
+    padding: 0px;
+    margin-top: 10px;
+    height: 35px;
+    width:35px;
+    border:1px;
+    border-style: groove;
+    border-radius: 100%;
+    border-color:black;   
+
+}
+nav svg{
+    
+    margin-right: 6px;
+    padding: 8px;
+    border:1px;
+    border-color:black;
+    border-style: solid;
+    border-radius: 6px;
+    
+}
