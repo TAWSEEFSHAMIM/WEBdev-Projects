@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness Progress</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Fitness Progress</h1>
+      <div id="progressSection">
+        <div class="circular-progress">
+          <svg width="300" height="300">
+            <circle class="progress-background" cx="150" cy="150" r="140"></circle>
+            <circle class="progress-bar" id="runningProgress" cx="150" cy="150" r="140"></circle>
+            <circle class="progress-bar" id="swimmingProgress" cx="150" cy="150" r="140"></circle>
+            <circle class="progress-bar" id="weightsProgress" cx="150" cy="150" r="140"></circle>
+          </svg>
+          <div class="progress-text" id="totalKcal">0 kcal 🔥</div>
+        </div>
+        <div class="legend">
+          <div class="legend-item">
+            <div class="legend-color" style="background-color: #ff4136"></div>
+            <span>Running</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color" style="background-color: #0074d9"></div>
+            <span>Swimming</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color" style="background-color: #2ecc40"></div>
+            <span>Weights</span>
+          </div>
+        </div>
+      </div>
+      <div id="calendar"></div>
+      <button id="tracker_btn" class="control-btn" onclick="window.location.href='index.html'">Back to Tracker</button>
+    </div>
+    <script src="scripts.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        updateProgress();
+        renderCalendar();
+      });
+    </script>
+  </body>
+</html>
