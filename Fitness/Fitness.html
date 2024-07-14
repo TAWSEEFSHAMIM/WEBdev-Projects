@@ -3,10 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fitness Progress</title>
+    <title>Fitness Tracker</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="container">
+      <h1>Fitness Tracker</h1>
+      <div class="exercise-buttons">
+        <button class="exercise-btn" onclick="selectExercise('running')"><img src="running_4721050.png" alt="Running" /> Running</button>
+        <button class="exercise-btn" onclick="selectExercise('swimming')">
+          <img src="https://cdn-icons-png.freepik.com/512/406/406164.png" alt="Swimming" />
+          Swimming
+        </button>
+        <button class="exercise-btn" onclick="selectExercise('weights')">
+          <img src="https://cdn-icons-png.flaticon.com/512/1830/1830784.png" alt="Weights" />
+          Weights
+        </button>
+      </div>
+      <div id="timer">00:00:00.000</div>
+      <div class="control-buttons">
+        <button class="control-btn" onclick="toggleTimer()" id="startStopBtn">Start</button>
+        <button id="reset_btn" class="control-btn" onclick="resetExercises()">Reset Progress</button>
+      </div>
+
+      <div id="result"></div>
+    </div>
+
     <div class="container">
       <h1>Fitness Progress</h1>
       <div id="progressSection">
@@ -34,15 +56,8 @@
           </div>
         </div>
       </div>
-      <div id="calendar"></div>
-      <button id="tracker_btn" class="control-btn" onclick="window.location.href='index.html'">Back to Tracker</button>
-    </div>
+      
+
     <script src="scripts.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        updateProgress();
-        renderCalendar();
-      });
-    </script>
   </body>
 </html>
